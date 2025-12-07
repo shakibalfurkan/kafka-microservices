@@ -13,7 +13,7 @@ const consumer = kafka.consumer({
   heartbeatInterval: 5000,
 });
 
-const runConsumer = async () => {
+const run = async () => {
   try {
     await producer.connect();
     await consumer.connect();
@@ -31,6 +31,8 @@ const runConsumer = async () => {
 
         const dummyOrderId = "order-xyz-123";
 
+        console.log(`Order consumer: Order created for user id ${userId}`);
+
         await producer.send({
           topic: "order-successful",
           messages: [
@@ -46,4 +48,4 @@ const runConsumer = async () => {
   }
 };
 
-runConsumer();
+run();
