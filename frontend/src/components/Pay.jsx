@@ -28,7 +28,7 @@ const Pay = ({ cart }) => {
       <div className="flex flex-col gap-12">
         <div className="">
           <div className="flex items-center gap-8">
-            <h1 className="font-thin tracking-wider">CART TOTAL</h1>
+            <h1 className="font-thin tracking-wider">CART TOTAL IS</h1>
             <h2 className="text-xl font-bold tracking-widest">${total}</h2>
           </div>
           <p className="text-sm text-gray-500 mt-4">
